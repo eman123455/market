@@ -8,7 +8,7 @@ class AppRoutes {
     routes:[
     GoRoute(
       path: kLoginView,
-      builder: (context, state) => const LoginView(),
+      builder: (context, state) =>  LoginView(),
       ),
    ]
    );
