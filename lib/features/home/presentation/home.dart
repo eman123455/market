@@ -12,7 +12,7 @@ class Home extends StatelessWidget {
       bottomNavigationBar: Container(
         color: AppColors.kWhiteColor,
         child: Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 8,vertical: 20),
+          padding: const EdgeInsets.symmetric(horizontal: 8,vertical: 16),
           child: GNav(
             curve: Curves.easeOutExpo, 
             duration: Duration(milliseconds: 600), 
