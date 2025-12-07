@@ -39,7 +39,7 @@ class _SignUpState extends State<SignUpView> {
                       CustomTextField(
                         hint: 'name',
                         controller: emailController,
-                        inputType: TextInputType.emailAddress,
+                        inputType: TextInputType.name,
                       ),
                       const SizedBox(height: 15),
                       CustomTextField(
@@ -66,7 +66,12 @@ class _SignUpState extends State<SignUpView> {
                       ),
                       const SizedBox(height: 15),
                       SizedBox(height: 40),
-                      CustomButton(buttonText: 'Sign Up'),
+                      CustomButton(
+                        buttonText: 'Sign Up',
+                        onTap: (){
+                          
+                        },
+                        ),
                       SizedBox(height: 15),
                       SizedBox(
                         width: double.infinity,
