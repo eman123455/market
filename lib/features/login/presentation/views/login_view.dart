@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 import 'package:market/core/app_colors.dart';
-import 'package:market/features/login/presentation/widgets/custom_button.dart';
-import 'package:market/features/login/presentation/widgets/custom_text_button.dart';
-import 'package:market/features/login/presentation/widgets/custom_text_field.dart';
+import 'package:market/core/app_routes.dart';
+import 'package:market/core/reusable_widgets/custom_button.dart';
+import 'package:market/core/reusable_widgets/custom_text_button.dart';
+import 'package:market/core/reusable_widgets/custom_text_field.dart';
 import 'package:sign_in_button/sign_in_button.dart';
 
 class LoginView extends StatefulWidget {
@@ -50,10 +52,12 @@ class _LoginViewState extends State<LoginView> {
                         sufficon: IconButton(
                           onPressed: () {
                             setState(() {
-                              obscureTextdecision = ! obscureTextdecision;
+                              obscureTextdecision = !obscureTextdecision;
                             });
                           },
-                          icon: obscureTextdecision?Icon(Icons.visibility):Icon(Icons.visibility_off),
+                          icon: obscureTextdecision
+                              ? Icon(Icons.visibility)
+                              : Icon(Icons.visibility_off),
                         ),
                       ),
                       const SizedBox(height: 15),
@@ -79,7 +83,7 @@ class _LoginViewState extends State<LoginView> {
                           shape: RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(12),
                           ),
-                          text: "Sign up with Google",
+                          text: "Sign In with Google",
                           textStyle: TextStyle(fontSize: 18),
                           onPressed: () {},
                         ),
@@ -99,7 +103,9 @@ class _LoginViewState extends State<LoginView> {
                       ),
                     ),
                     CustomTextButton(
-                      onTap: () {},
+                      onTap: () {
+                        context.go(AppRoutes.kSignUp);
+                      },
                       textColor: Colors.orange,
                       text: 'Sign Up',
                     ),
