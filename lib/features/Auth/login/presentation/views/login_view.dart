@@ -77,10 +77,10 @@ class _LoginViewState extends State<LoginView> {
                       SizedBox(height: 40),
                       CustomButton(
                         buttonText: 'Sign In',
-                        onTap: (){
-                          
+                        onTap: () {
+                          context.go(AppRoutes.kHome);
                         },
-                        ),
+                      ),
                       SizedBox(height: 15),
                       SizedBox(
                         width: double.infinity,
