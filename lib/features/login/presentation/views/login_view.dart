@@ -66,14 +66,21 @@ class _LoginViewState extends State<LoginView> {
                         child: Align(
                           alignment: Alignment.topRight,
                           child: CustomTextButton(
-                            onTap: () {},
+                            onTap: () {
+                              context.go(AppRoutes.kForgotPasswordView);
+                            },
                             textColor: AppColors.kPrimaryColor,
                             text: 'Forgot Password ?',
                           ),
                         ),
                       ),
                       SizedBox(height: 40),
-                      CustomButton(buttonText: 'Sign In'),
+                      CustomButton(
+                        buttonText: 'Sign In',
+                        onTap: (){
+                          
+                        },
+                        ),
                       SizedBox(height: 15),
                       SizedBox(
                         width: double.infinity,
