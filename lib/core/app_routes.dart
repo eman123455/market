@@ -2,7 +2,7 @@ import 'package:go_router/go_router.dart';
 import 'package:market/features/Auth/forgot_password/presentation/forgot_password_view.dart';
 import 'package:market/features/Auth/login/presentation/views/login_view.dart';
 import 'package:market/features/Auth/sign%20up/presentation/views/sign_up_view.dart';
-import 'package:market/features/home/presentation/home.dart';
+import 'package:market/features/home/presentation/views/home.dart';
 
 class AppRoutes {
   static const String kLoginView = '/';
