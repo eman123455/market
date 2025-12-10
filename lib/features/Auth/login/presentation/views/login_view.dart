@@ -2,9 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:market/core/app_colors.dart';
 import 'package:market/core/app_routes.dart';
-import 'package:market/core/reusable_widgets/custom_button.dart';
-import 'package:market/core/reusable_widgets/custom_text_button.dart';
-import 'package:market/core/reusable_widgets/custom_text_field.dart';
+import 'package:market/core/components/custom_button.dart';
+import 'package:market/core/components/custom_text_button.dart';
+import 'package:market/core/components/custom_text_field.dart';
 import 'package:sign_in_button/sign_in_button.dart';
 
 class LoginView extends StatefulWidget {

@@ -14,7 +14,10 @@ class Home extends StatelessWidget {
     return BlocBuilder<NavBarCubit, NavBarState>(
       builder: (context, state) {
         return Scaffold(
-          body: Constants.views[cubit.currentIndex],
+          body: Padding(
+            padding: const EdgeInsets.fromLTRB(16, 30, 16, 5),
+            child: Constants.views[cubit.currentIndex],
+          ),
           bottomNavigationBar: Container(
             color: AppColors.kWhiteColor,
             child: Padding(

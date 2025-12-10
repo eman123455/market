@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:market/core/reusable_widgets/custom_button.dart';
-import 'package:market/core/reusable_widgets/custom_text_field.dart';
+import 'package:market/core/components/custom_button.dart';
+import 'package:market/core/components/custom_text_field.dart';
 
 class ForgotPasswordView extends StatelessWidget {
   ForgotPasswordView({super.key});

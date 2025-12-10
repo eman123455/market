@@ -5,7 +5,7 @@ import 'package:market/features/profile/presentation/views/profile.dart';
 import 'package:market/features/store/presentation/views/store.dart';
 
 class Constants {
-  static const List<Widget> views = [
+  static  List<Widget> views = [
     HomeBody(),
     Store(),
     Favorite(),
