@@ -30,7 +30,7 @@ class _LoginViewState extends State<LoginView> {
             child: Column(
               children: [
                 Image.asset(
-                  'lib/assets/283e86d4-6cfc-4e55-988b-a1d4ae5b7094.png',
+                  'assets/images/283e86d4-6cfc-4e55-988b-a1d4ae5b7094.png',
                   width: 200,
                   height: 200,
                 ),
