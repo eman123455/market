@@ -1,7 +1,9 @@
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:go_router/go_router.dart';
 import 'package:market/features/Auth/forgot_password/presentation/forgot_password_view.dart';
 import 'package:market/features/Auth/login/presentation/views/login_view.dart';
 import 'package:market/features/Auth/sign%20up/presentation/views/sign_up_view.dart';
+import 'package:market/features/home/bussiness_logic/nav_bar_cubit/nav_bar_cubit.dart';
 import 'package:market/features/home/presentation/views/home.dart';
 
 class AppRoutes {
@@ -11,23 +13,18 @@ class AppRoutes {
   static const String kHome = '/Home';
 
   static GoRouter routes = GoRouter(
-    routes:[
-    GoRoute(
-      path: kLoginView,
-      builder: (context, state) =>  LoginView(),
+    routes: [
+      GoRoute(path: kLoginView, builder: (context, state) => LoginView()),
+      GoRoute(path: kSignUp, builder: (context, state) => SignUpView()),
+      GoRoute(
+        path: kForgotPasswordView,
+        builder: (context, state) => ForgotPasswordView(),
       ),
-    GoRoute(
-      path: kSignUp,
-      builder: (context, state) =>  SignUpView(),
+      GoRoute(
+        path: kHome,
+        builder: (context, state) =>
+            BlocProvider(create: (context) => NavBarCubit(), child: Home()),
       ),
-    GoRoute(
-      path: kForgotPasswordView,
-      builder: (context, state) =>  ForgotPasswordView(),
-      ),
-    GoRoute(
-      path: kHome,
-      builder: (context, state) =>  Home(),
-      ),
-   ]
-   );
+    ],
+  );
 }
