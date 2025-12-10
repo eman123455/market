@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:market/core/app_colors.dart';
 
 class CustomTextField extends StatelessWidget {
-  CustomTextField({
+  const CustomTextField({
     super.key,
     required this.hint,
     required this.controller,
@@ -29,7 +29,7 @@ class CustomTextField extends StatelessWidget {
       keyboardType: inputType,
       decoration: InputDecoration(
         suffixIcon: sufficon,
-        hintText: 'Enter your ${hint}',
+        hintText: 'Enter your $hint',
         border: OutlineInputBorder(
           borderSide: BorderSide(color: AppColors.kGreyColor),
           borderRadius: BorderRadius.circular(8),
