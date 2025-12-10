@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:market/core/app_colors.dart';
 import 'package:market/core/components/custom_search_field.dart';
 import 'package:market/core/constants.dart';
+import 'package:market/features/home/presentation/widgets/categories_list.dart';
 import 'package:market/features/home/presentation/widgets/category_item.dart';
 
 class HomeBody extends StatelessWidget {
@@ -27,23 +28,7 @@ class HomeBody extends StatelessWidget {
           ),
         ),
         SizedBox(height: 10,),
-        SizedBox(
-          height: 50,
-          child: ListView.builder(
-            scrollDirection: Axis.horizontal,
-            itemCount: Constants.popularCategory.length,
-            itemBuilder: (context, index) {
-              final item = Constants.popularCategory[index];
-              return Padding(
-                padding: const EdgeInsets.only(right: 10),
-                child: CategoryItem(
-                  itemName:item.categoryName ,
-                  icon: item.icon,
-                ),
-              );
-            },
-          ),
-        ),
+        CategoriesList()
       ],
     );
   }
