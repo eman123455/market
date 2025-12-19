@@ -38,7 +38,7 @@ class Home extends StatelessWidget {
                   GButton(icon: Icons.home, text: 'Home'),
                   GButton(icon: Icons.store, text: 'Store'),
                   GButton(icon: Icons.favorite, text: 'Favourite'),
-                  GButton(icon: Icons.person, text: 'Profile'),
+                  GButton(icon: Icons.settings, text: 'settings'),
                 ],
               ),
             ),
