@@ -29,17 +29,20 @@ class CustomTextField extends StatelessWidget {
       keyboardType: inputType,
       decoration: InputDecoration(
         suffixIcon: sufficon,
-        hintText: 'Enter your $hint',
+        hintText: '$hint',
         border: OutlineInputBorder(
-          borderSide: BorderSide(color: AppColors.kGreyColor),
+          borderSide: BorderSide(color: AppColors.kPrimaryColor,),
           borderRadius: BorderRadius.circular(8),
         ),
         enabledBorder: OutlineInputBorder(
-          borderSide: BorderSide(color: AppColors.kGreyColor),
+          borderSide: BorderSide(
+            color: AppColors.kGreyColor,
+            width: 2
+            ),
           borderRadius: BorderRadius.circular(8),
         ),
         focusedBorder: OutlineInputBorder(
-          borderSide: BorderSide(color: AppColors.kGreyColor),
+          borderSide: BorderSide(color: AppColors.kPrimaryColor),
           borderRadius: BorderRadius.circular(8),
         ),
       ),
