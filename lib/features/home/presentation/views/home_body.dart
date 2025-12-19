@@ -4,7 +4,6 @@ import 'package:market/core/components/custom_search_field.dart';
 import 'package:market/features/home/presentation/widgets/categories_list.dart';
 import 'package:market/features/home/presentation/widgets/product_card.dart';
 
-
 class HomeBody extends StatelessWidget {
   HomeBody({super.key});
   final TextEditingController searchControll = TextEditingController();
@@ -22,16 +21,34 @@ class HomeBody extends StatelessWidget {
         Text(
           'Popular Category',
           style: TextStyle(
-            fontSize: 22,
+            fontSize: 20,
             color: AppColors.kGreyColor,
             fontWeight: FontWeight.w600,
           ),
         ),
-        SizedBox(height: 10,),
+        SizedBox(height: 10),
         CategoriesList(),
-        SizedBox(height: 10,),
-        
-       ProductCard()
+        SizedBox(height: 10),
+        Text(
+          'Recently Products',
+          style: TextStyle(
+            fontSize: 20,
+            color: AppColors.kGreyColor,
+            fontWeight: FontWeight.w600,
+          ),
+        ),
+        SizedBox(height: 10),
+        ListView.builder(
+          shrinkWrap: true,
+          physics: NeverScrollableScrollPhysics(),
+          itemCount: 10,
+          itemBuilder: (context, index) {
+            return Padding(
+              padding: const EdgeInsets.symmetric(),
+              child: ProductCard(),
+            );
+          },
+        ),
       ],
     );
   }
