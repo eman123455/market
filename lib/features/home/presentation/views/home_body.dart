@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:market/core/app_colors.dart';
 import 'package:market/core/components/custom_search_field.dart';
-import 'package:market/core/constants.dart';
 import 'package:market/features/home/presentation/widgets/categories_list.dart';
-import 'package:market/features/home/presentation/widgets/category_item.dart';
+import 'package:market/features/home/presentation/widgets/product_card.dart';
+
 
 class HomeBody extends StatelessWidget {
   HomeBody({super.key});
@@ -28,7 +28,10 @@ class HomeBody extends StatelessWidget {
           ),
         ),
         SizedBox(height: 10,),
-        CategoriesList()
+        CategoriesList(),
+        SizedBox(height: 10,),
+        
+       ProductCard()
       ],
     );
   }
