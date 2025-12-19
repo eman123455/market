@@ -1,6 +1,6 @@
 
 import 'package:flutter/material.dart';
-import 'package:market/features/favorite/presentation/favorite.dart';
+import 'package:market/features/favorite/presentation/views/favorite.dart';
 import 'package:market/features/home/presentation/views/home_body.dart';
 import 'package:market/features/home/presentation/widgets/category.dart';
 import 'package:market/features/profile/presentation/views/profile.dart';
