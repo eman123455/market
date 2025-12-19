@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:market/features/home/presentation/widgets/product_card.dart';
+import 'package:market/core/components/product_card.dart';
 
 class ProductList extends StatelessWidget {
   const ProductList({super.key});

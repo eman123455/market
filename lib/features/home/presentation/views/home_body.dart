@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:market/core/app_colors.dart';
 import 'package:market/core/components/custom_search_field.dart';
 import 'package:market/features/home/presentation/widgets/categories_list.dart';
-import 'package:market/features/home/presentation/widgets/product_card.dart';
+import 'package:market/core/components/product_card.dart';
 
 class HomeBody extends StatelessWidget {
   HomeBody({super.key});
@@ -11,6 +11,15 @@ class HomeBody extends StatelessWidget {
   Widget build(BuildContext context) {
     return ListView(
       children: [
+        Center(
+          child: Text('Welcome to Shoplio',
+          style: TextStyle(
+            fontSize: 30,
+            fontWeight: FontWeight.bold
+          ),
+          ),
+        ),
+        SizedBox(height: 10,),
         CustomSearchField(searchControll: searchControll),
         SizedBox(height: 20),
         ClipRRect(
