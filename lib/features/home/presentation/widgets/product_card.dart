@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:market/core/app_colors.dart';
+import 'package:market/core/components/cache_image.dart';
 
 class ProductCard extends StatelessWidget {
   const ProductCard({super.key});
@@ -21,16 +22,16 @@ class ProductCard extends StatelessWidget {
                     child: SizedBox(
                       width: double.infinity,
                       
-                      child: Image.network('https://images.unsplash.com/photo-1542291026-7eec264c27ff',
-                      fit: BoxFit.cover,
-                      ),
+                      child: CacheImage(
+                        imageUrl: 'https://images.unsplash.com/photo-1542291026-7eec264c27ff',
+                      )
                     ),
                   ),
                   Positioned(
                     right: 10,
                     top: 10,
                     child: Container(
-                      padding: EdgeInsets.all(8),
+                      padding: EdgeInsets.all(2),
                       decoration: BoxDecoration(
                         color: AppColors.kGreyColor.withOpacity(0.5),
                       borderRadius: BorderRadius.circular(10)
