@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:market/core/app_colors.dart';
 import 'package:market/core/components/custom_search_field.dart';
+import 'package:market/core/components/product_List.dart';
 import 'package:market/features/home/presentation/widgets/categories_list.dart';
 import 'package:market/core/components/product_card.dart';
 
@@ -47,17 +48,7 @@ class HomeBody extends StatelessWidget {
           ),
         ),
         SizedBox(height: 10),
-        ListView.builder(
-          shrinkWrap: true,
-          physics: NeverScrollableScrollPhysics(),
-          itemCount: 10,
-          itemBuilder: (context, index) {
-            return Padding(
-              padding: const EdgeInsets.symmetric(),
-              child: ProductCard(),
-            );
-          },
-        ),
+        ProductList()
       ],
     );
   }
