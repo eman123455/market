@@ -85,20 +85,25 @@ class ProductCard extends StatelessWidget {
                             ),
                           ),
                          Spacer(),
-                         Container(
-                          padding: EdgeInsets.symmetric(horizontal: 40,vertical: 12),
-                          decoration: BoxDecoration(
-                            color: AppColors.kPrimaryColor,
-                            borderRadius: BorderRadius.circular(20)
-                          ),
-                          child: Text(
-                            'Buy',
-                            style: TextStyle(
-                              color: AppColors.kWhiteColor,
-                              fontWeight: FontWeight.bold,
-                              fontSize: 20
+                         GestureDetector(
+                          onTap: (){
+                            
+                          },
+                           child: Container(
+                            padding: EdgeInsets.symmetric(horizontal: 40,vertical: 12),
+                            decoration: BoxDecoration(
+                              color: AppColors.kPrimaryColor,
+                              borderRadius: BorderRadius.circular(20)
                             ),
-                          ),
+                            child: Text(
+                              'Buy',
+                              style: TextStyle(
+                                color: AppColors.kWhiteColor,
+                                fontWeight: FontWeight.bold,
+                                fontSize: 20
+                              ),
+                            ),
+                           ),
                          )
                         ],
                       )
