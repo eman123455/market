@@ -16,6 +16,8 @@ class SignUpView extends StatefulWidget {
 class _SignUpState extends State<SignUpView> {
   final TextEditingController emailController = TextEditingController();
   final TextEditingController passController = TextEditingController();
+  final TextEditingController firstNameController = TextEditingController();
+  final TextEditingController lastNameController = TextEditingController();
   bool obscureTextdecision = true;
   @override
   Widget build(BuildContext context) {
@@ -37,13 +39,21 @@ class _SignUpState extends State<SignUpView> {
                   child: Column(
                     children: [
                       CustomTextField(
-                        hint: 'name',
-                        controller: emailController,
+                        hint: 'First name',
+                        labelText: 'First name',
+                        controller: firstNameController,
                         inputType: TextInputType.name,
                       ),
-                      const SizedBox(height: 15),
+                      SizedBox(height: 12),
                       CustomTextField(
-                        hint: 'email',
+                        hint: 'Last name',
+                        labelText: 'last name',
+                        controller: lastNameController,
+                        inputType: TextInputType.name,
+                      ),
+                      SizedBox(height: 15),
+                      CustomTextField(
+                        hint: 'E-mail',
                         controller: emailController,
                         inputType: TextInputType.emailAddress,
                       ),
@@ -66,12 +76,7 @@ class _SignUpState extends State<SignUpView> {
                       ),
                       const SizedBox(height: 15),
                       SizedBox(height: 40),
-                      CustomButton(
-                        buttonText: 'Sign Up',
-                        onTap: (){
-                          
-                        },
-                        ),
+                      CustomButton(buttonText: 'Sign Up', onTap: () {}),
                       SizedBox(height: 15),
                       SizedBox(
                         width: double.infinity,
