@@ -5,12 +5,14 @@ import 'package:market/features/Auth/login/presentation/views/login_view.dart';
 import 'package:market/features/Auth/sign%20up/presentation/views/sign_up_view.dart';
 import 'package:market/features/home/bussiness_logic/nav_bar_cubit/nav_bar_cubit.dart';
 import 'package:market/features/home/presentation/views/home.dart';
+import 'package:market/features/settings/presentation/views/user_profile.dart';
 
 class AppRoutes {
   static const String kLoginView = '/';
   static const String kSignUp = '/SignUpView';
   static const String kForgotPasswordView = '/ForgotPasswordView';
   static const String kHome = '/Home';
+  static const String kUserProfile = '/UserProfile';
 
   static GoRouter routes = GoRouter(
     routes: [
@@ -25,6 +27,10 @@ class AppRoutes {
         builder: (context, state) =>
             BlocProvider(create: (context) => NavBarCubit(), child: Home()),
       ),
+      GoRoute(
+        path: kUserProfile,
+        builder: (context, state) =>UserProfile(),
+        ),
     ],
   );
 }
