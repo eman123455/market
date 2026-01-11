@@ -12,4 +12,14 @@ class AppFunctions {
         );
     }
   }
+  static AppBar customAppBar({required String text}) {
+    return AppBar(
+      backgroundColor:   AppColors.kPrimaryColor,
+      title: Text(
+        text,
+        style: TextStyle(color: AppColors.kScaffoldColor,fontWeight: FontWeight.bold),
+      ),
+      iconTheme: IconThemeData(color: AppColors.kScaffoldColor),
+    );
+  }
 }
