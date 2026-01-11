@@ -32,11 +32,11 @@ class CustomTextField extends StatelessWidget {
       decoration: InputDecoration(
         suffixIcon: sufficon,
         hintText: hint,
-        label: Text(labelText,
-        style: TextStyle(
-          color: AppColors.kGreyColor
-        ),
-        ),
+        // label: Text(labelText,
+        // style: TextStyle(
+        //   color: AppColors.kGreyColor
+        // ),
+        // ),
         border: OutlineInputBorder(
           borderSide: BorderSide(color: AppColors.kPrimaryColor),
           borderRadius: BorderRadius.circular(8),
