@@ -122,10 +122,12 @@ class Settings extends StatelessWidget {
         Divider(thickness: 0.5, color: AppColors.kGreyColor),
         SettingRow(
           settingName: 'My Orders',
-           tap: (){},
-            icon: Icons.shopping_bag
-            ),
-            
+          tap: () {
+            context.push(AppRoutes.kMyOrderView);
+          },
+          icon: Icons.shopping_bag,
+        ),
+
         SizedBox(height: 8),
         Divider(thickness: 0.5, color: AppColors.kGreyColor),
         SizedBox(height: 20),
