@@ -5,6 +5,7 @@ import 'package:market/features/Auth/login/presentation/views/login_view.dart';
 import 'package:market/features/Auth/sign%20up/presentation/views/sign_up_view.dart';
 import 'package:market/features/home/bussiness_logic/nav_bar_cubit/nav_bar_cubit.dart';
 import 'package:market/features/home/presentation/views/home.dart';
+import 'package:market/features/product_details/presentation/views/product_details.dart';
 import 'package:market/features/settings/presentation/views/my_order_view.dart';
 import 'package:market/features/settings/presentation/views/user_profile.dart';
 
@@ -15,6 +16,7 @@ class AppRoutes {
   static const String kHome = '/Home';
   static const String kUserProfile = '/UserProfile';
   static const String kMyOrderView= '/MyOrderView';
+  static const String kProductDetails= '/ProductDetails';
 
   static GoRouter routes = GoRouter(
     routes: [
@@ -36,6 +38,10 @@ class AppRoutes {
       GoRoute(
         path: kMyOrderView,
         builder: (context, state) =>MyOrderView(),
+        ),
+      GoRoute(
+        path: kProductDetails,
+        builder: (context, state) =>ProductDetails(),
         ),
     ],
   );
