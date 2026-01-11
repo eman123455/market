@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:market/core/app_colors.dart';
 import 'package:market/core/components/custom_button.dart';
 import 'package:market/core/components/custom_text_field.dart';
+import 'package:market/core/functions/app_functions.dart';
 
 class UserProfile extends StatelessWidget {
  UserProfile({super.key});
@@ -11,14 +12,8 @@ class UserProfile extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        backgroundColor:  AppColors.kScaffoldColor,
-        title: Text(
-          'User Profile',
-          style: TextStyle(color: AppColors.kPrimaryColor,fontWeight: FontWeight.bold),
-        ),
-        iconTheme: IconThemeData(color: AppColors.kPrimaryColor),
-      ),
+    appBar: AppFunctions.customAppBar(text: 'My Orders'),
+
       body: Padding(
         padding: const EdgeInsets.only(top: 70, right: 10,left: 10),
         child: Form(
@@ -89,4 +84,6 @@ class UserProfile extends StatelessWidget {
       ),
     );
   }
+
+  
 }
