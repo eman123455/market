@@ -1,4 +1,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- Allow loading remote images and network calls -->
+    <uses-permission android:name="android.permission.INTERNET" />
     <application
         android:label="market"
         android:name="${applicationName}"
