@@ -1,5 +1,5 @@
 import 'package:bloc/bloc.dart';
-import 'package:market/core/constants.dart';
+import 'package:market/core/resource/constants.dart';
 import 'package:meta/meta.dart';
 import 'package:supabase_flutter/supabase_flutter.dart';
 

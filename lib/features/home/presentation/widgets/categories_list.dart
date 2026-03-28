@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:market/core/constants.dart';
+import 'package:market/core/resource/constants.dart';
 import 'package:market/features/home/presentation/widgets/category_item.dart';
 
 class CategoriesList extends StatelessWidget {

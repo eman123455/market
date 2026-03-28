@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_rating_bar/flutter_rating_bar.dart';
-import 'package:market/core/app_colors.dart';
+import 'package:market/core/resource/app_colors.dart';
 import 'package:market/core/components/cache_image.dart';
 import 'package:market/core/components/custom_text_field.dart';
 import 'package:market/core/functions/app_functions.dart';

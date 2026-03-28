@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:market/core/app_colors.dart';
+import 'package:market/core/resource/app_colors.dart';
 import 'package:market/core/components/custom_search_field.dart';
 import 'package:market/core/components/product_List.dart';
 import 'package:market/features/home/presentation/widgets/categories_list.dart';

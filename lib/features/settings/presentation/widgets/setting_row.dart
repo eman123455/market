@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:market/core/app_colors.dart';
+import 'package:market/core/resource/app_colors.dart';
 
 class SettingRow extends StatelessWidget {
   const SettingRow({super.key, required this.settingName, required this.tap, required this.icon});

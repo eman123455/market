@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:market/core/app_colors.dart';
+import 'package:market/core/resource/app_colors.dart';
 
 class CategoryItem extends StatelessWidget {
   const CategoryItem({super.key ,required this.icon, required this.itemName});

@@ -1,6 +1,6 @@
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
-import 'package:market/core/app_colors.dart';
+import 'package:market/core/resource/app_colors.dart';
 import 'package:market/core/components/custom_button.dart';
 import 'package:market/core/components/custom_text_field.dart';
 import 'package:market/core/functions/app_functions.dart';

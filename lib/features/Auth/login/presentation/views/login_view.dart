@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
-import 'package:market/core/app_colors.dart';
-import 'package:market/core/app_routes.dart';
+import 'package:market/core/resource/app_colors.dart';
+import 'package:market/core/resource/app_routes.dart';
 import 'package:market/core/components/custom_button.dart';
 import 'package:market/core/components/custom_text_button.dart';
 import 'package:market/core/components/custom_text_field.dart';
 import 'package:sign_in_button/sign_in_button.dart';
 
 class LoginView extends StatefulWidget {
-  LoginView({super.key});
+  const LoginView({super.key});
 
   @override
   State<LoginView> createState() => _LoginViewState();
@@ -19,6 +19,7 @@ class _LoginViewState extends State<LoginView> {
 
   final TextEditingController passController = TextEditingController();
   bool obscureTextdecision = true;
+  final _key = GlobalKey<FormState>();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -36,6 +37,7 @@ class _LoginViewState extends State<LoginView> {
                 ),
 
                 Form(
+                  key: _key,
                   child: Column(
                     children: [
                       CustomTextField(
