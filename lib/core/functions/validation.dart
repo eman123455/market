@@ -26,9 +26,9 @@ static String? passValidator(String? value) {
   if (!RegExp(r'\d').hasMatch(value)) {
     return 'Password must contain at least one number';
   }
-  if (!RegExp(r'[!@#$%^&*(),.?":{}|<>]').hasMatch(value)) {
-    return 'Password must contain at least one special character';
-  }
+  // if (!RegExp(r'[!@#$%^&*(),.?":{}|<>]').hasMatch(value)) {
+  //   return 'Password must contain at least one special character';
+  // }
   return null;
 }
 }

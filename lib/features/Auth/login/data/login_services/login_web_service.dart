@@ -12,7 +12,7 @@ class LoginWebService {
         password: password,
       );
       if (response.user == null) {
-        throw Exception('Login failed. Please try again.');
+        return 'Login failed. Please try again.';
       }
       return null;
     } on AuthException catch (e) {
