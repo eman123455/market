@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:market/core/app_colors.dart';
 import 'package:market/core/components/custom_button.dart';
 import 'package:market/core/components/custom_text_field.dart';
 
@@ -8,6 +9,10 @@ class ForgotPasswordView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        backgroundColor: AppColors.kScaffoldColor,
+        iconTheme: IconThemeData(color: AppColors.kPrimaryColor),
+      ),
       body: SafeArea(
         child: Padding(
           padding: const EdgeInsets.fromLTRB(16, 60, 16, 10),
