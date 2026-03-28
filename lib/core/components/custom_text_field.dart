@@ -9,7 +9,7 @@ class CustomTextField extends StatelessWidget {
     required this.inputType,
     this.obscureText = false,
     this.sufficon,
-    this.labelText=''
+    this.labelText = '', this.validator,
   });
   final TextEditingController controller;
   final String hint;
@@ -17,14 +17,11 @@ class CustomTextField extends StatelessWidget {
   final bool obscureText;
   final Widget? sufficon;
   final String labelText;
+  final String? Function(String?)? validator;
   @override
   Widget build(BuildContext context) {
     return TextFormField(
-      validator: (value) {
-        if (value == null || value.isEmpty) {
-          return 'this field is required';
-        }
-      },
+      validator: validator,
       obscureText: obscureText,
       obscuringCharacter: '*',
       controller: controller,
