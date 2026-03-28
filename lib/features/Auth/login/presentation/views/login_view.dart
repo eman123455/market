@@ -67,7 +67,7 @@ class _LoginViewState extends State<LoginView> {
                           alignment: Alignment.topRight,
                           child: CustomTextButton(
                             onTap: () {
-                              context.go(AppRoutes.kForgotPasswordView);
+                              context.push(AppRoutes.kForgotPasswordView);
                             },
                             textColor: AppColors.kPrimaryColor,
                             text: 'Forgot Password ?',
@@ -111,7 +111,7 @@ class _LoginViewState extends State<LoginView> {
                     ),
                     CustomTextButton(
                       onTap: () {
-                        context.go(AppRoutes.kSignUp);
+                        context.push(AppRoutes.kSignUp);
                       },
                       textColor: Colors.orange,
                       text: 'Sign Up',
