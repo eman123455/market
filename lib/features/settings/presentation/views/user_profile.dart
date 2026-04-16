@@ -1,5 +1,7 @@
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:market/core/components/custom_profile_photo.dart';
 import 'package:market/core/resource/app_colors.dart';
 import 'package:market/core/components/custom_button.dart';
 import 'package:market/core/components/custom_text_field.dart';
@@ -19,37 +21,7 @@ class UserProfile extends StatelessWidget {
         child: Form(
           child: ListView(
             children: [
-              Align(
-                alignment: Alignment.center,
-                child: SizedBox(
-                  width: 100,
-                  height: 100,
-                  child: Stack(
-                    clipBehavior: Clip.none,
-                    children: [
-                      CircleAvatar(
-                        radius: 50,
-                        backgroundImage: CachedNetworkImageProvider(
-                          'https://images.unsplash.com/photo-1542291026-7eec264c27ff',
-                        ),
-                      ),
-                      Positioned(
-                        bottom: -4,
-                        right: -4,
-                        child: CircleAvatar(
-                          radius: 16,
-                          backgroundColor: Colors.white,
-                          child: Icon(
-                            Icons.camera_alt,
-                            size: 18,
-                            color: AppColors.kPrimaryColor,
-                          ),
-                        ),
-                      ),
-                    ],
-                  ),
-                ),
-              ),
+             CustomProfilePhoto(imgUrl: 'https://images.unsplash.com/photo-1542291026-7eec264c27ff'),
               SizedBox(height: 40,),
               CustomTextField(
                 hint: 'First name',
