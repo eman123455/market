@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:go_router/go_router.dart';
+import 'package:market/core/components/custom_profile_photo.dart';
 import 'package:market/core/resource/app_routes.dart';
 import 'package:market/core/components/custom_button.dart';
 import 'package:market/core/components/custom_text_button.dart';
@@ -14,11 +16,29 @@ class SignUpView extends StatefulWidget {
 }
 
 class _SignUpState extends State<SignUpView> {
-  final TextEditingController emailController = TextEditingController();
-  final TextEditingController passController = TextEditingController();
-  final TextEditingController firstNameController = TextEditingController();
-  final TextEditingController lastNameController = TextEditingController();
+  late TextEditingController emailController;
+  late TextEditingController passController;
+  late TextEditingController firstNameController;
+  late TextEditingController lastNameController;
   bool obscureTextdecision = true;
+  @override
+  void initState() {
+    emailController = TextEditingController();
+    passController = TextEditingController();
+    firstNameController = TextEditingController();
+    lastNameController = TextEditingController();
+    super.initState();
+  }
+
+  @override
+  void dispose() {
+    emailController.dispose();
+    passController.dispose();
+    firstNameController.dispose();
+    lastNameController.dispose();
+    super.dispose();
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -29,15 +49,11 @@ class _SignUpState extends State<SignUpView> {
           child: SafeArea(
             child: Column(
               children: [
-                Image.asset(
-                  'assets/images/283e86d4-6cfc-4e55-988b-a1d4ae5b7094.png',
-                  width: 200,
-                  height: 200,
-                ),
-
                 Form(
                   child: Column(
                     children: [
+                CustomProfilePhoto(imgUrl: 'https://images.unsplash.com/photo-1542291026-7eec264c27ff'),
+                SizedBox(height: 20.h,),
                       CustomTextField(
                         hint: 'First name',
                         labelText: 'First name',
