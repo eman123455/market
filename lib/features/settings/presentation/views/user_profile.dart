@@ -12,10 +12,10 @@ class UserProfile extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-    appBar: AppFunctions.customAppBar(text: 'My Orders'),
+    appBar: AppFunctions.customAppBar(text: 'My Profile'),
 
       body: Padding(
-        padding: const EdgeInsets.only(top: 70, right: 10,left: 10),
+        padding: const EdgeInsets.only(top: 60, right: 10,left: 10),
         child: Form(
           child: ListView(
             children: [

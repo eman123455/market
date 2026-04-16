@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_dotenv/flutter_dotenv.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:market/core/resource/app_colors.dart';
 import 'package:market/core/resource/app_routes.dart';
 import 'package:market/core/utils/service_locator.dart';
@@ -21,11 +22,20 @@ class MarketApp extends StatelessWidget {
   const MarketApp({super.key});
   @override
   Widget build(BuildContext context) {
+    return ScreenUtilInit(
+  designSize: const Size(375, 812),
+  minTextAdapt: true,
+  splitScreenMode: true,
+  builder: (context, child) {
     return MaterialApp.router(
       title: 'our market',
       debugShowCheckedModeBanner: false,
-      theme: ThemeData(scaffoldBackgroundColor: AppColors.kScaffoldColor),
+      theme: ThemeData(
+        scaffoldBackgroundColor: AppColors.kScaffoldColor,
+      ),
       routerConfig: AppRoutes.routes,
     );
+  },
+);
   }
 }
