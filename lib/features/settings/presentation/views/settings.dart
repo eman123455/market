@@ -47,7 +47,9 @@ class Settings extends StatelessWidget {
             ),
             Spacer(),
             IconButton(
-              onPressed: () {},
+              onPressed: () {
+                context.go(AppRoutes.kLoginView);
+              },
               icon: Icon(Icons.logout, color: AppColors.kBlackColor),
             ),
           ],
